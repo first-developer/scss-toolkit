@@ -27,6 +27,7 @@
 
     /*= @group Branding
     ---------------------------------------------------------------------- */
+    // This could (should?) be a module but is left here for demo purposes.
 
     .branding {
       @extend .l-constrained;
@@ -37,7 +38,8 @@
       }
       .branding-tagline {
         color: $color-note;
-        font-size: rs(21);
+        font-size: rs(18);
+        font-style: italic;
       }
     }
 

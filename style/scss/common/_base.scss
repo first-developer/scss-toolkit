@@ -1,2 +1,250 @@
-@import "reset";
-@import "elements";
+/*= @group Base
+---------------------------------------------------------------------- */
+// Based on HTML5 Boilerplate default styles
+
+
+  /*= @group Typography
+  ---------------------------------------------------------------------- */
+
+  body {
+    font: $font-weight-normal #{$base-fs/16*100}%/($base-lh/$base-fs) sans-serif;
+  }
+
+
+    /*= @group Font Stacks
+    ---------------------------------------------------------------------- */
+
+    /* Default font stack */
+    html, button, input, select, textarea {
+      font-family: $font-family-default;
+    }
+
+    /* Display font stack */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $font-family-display;
+    }
+
+    /* Alternate font stack */
+    blockquote, figcaption {
+      font-family: $font-family-serif;
+    }
+
+    // /* Caption font stack, should be suitable for smaller sizes */
+    // e.g. [role=contentinfo], .caption { font-family: $font-family-caption; }
+
+    /* Monospace font stack, for code samples and preformatted content */
+    code, kbd, pre, samp {
+      font-family: $font-family-monospace;
+    }
+
+
+    /*= @group Headings
+    ---------------------------------------------------------------------- */
+
+    h1, h2, h3, h4, h5, h6  {
+      font-style: normal;
+    }
+    h1, h2, h3 {
+      font-weight: $font-weight-semibold;
+    }
+    h4, h5, h6 {
+      font-weight: $font-weight-normal;
+    }
+
+    h1 {
+      font-size: rs(32);
+      margin: 0 0 rs(21,32) 0;
+    }
+    h2 {
+      font-size: rs(28);
+      margin: rs(21,28) 0 rs(7,28) 0;
+    }
+    h3 {
+      font-size: rs(24);
+      margin: rs(21,24) 0 rs(7,24) 0;
+    }
+    h4 {
+      font-size: rs(21);
+      margin: rs(21,21) 0 rs(7,21) 0;
+    }
+    h5 {
+      font-size: rs(18);
+      margin: rs(21,18) 0 rs(7,18) 0;
+    }
+    h5 {
+      font-size: rs(16);
+      margin: rs(21,16) 0 rs(7,16) 0;
+    }
+
+
+    /*= @group Links
+    ---------------------------------------------------------------------- */
+    // Declared: link, visited, hover, active
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px dotted $color-link-default;
+      word-wrap: break-word;
+    }
+
+    a           { color: $color-link-default; }
+    a:visited   { color: $color-link-visited; }
+    a:hover     { color: $color-link-hover;   }
+    a:active    { color: $color-link-active;  }
+
+    a:focus { outline: thin dotted; }
+    a:hover, a:active { outline: 0; }
+
+
+    /*= @group Text Level Elements
+    ---------------------------------------------------------------------- */
+
+    /* Default margin */
+    p {
+      margin: 0 0 rs($base-lh) 0;
+    }
+
+    /* Lists */
+    ul li {
+      list-style: disc outside;
+    }
+    ol li {
+      list-style: outside decimal;
+    }
+    dl dt {
+      font-weight: $font-weight-bold;
+    }
+
+    ul, ol, dl {
+      padding: 0;
+      margin: 0 0 rs($base-lh) 0;
+    }
+    li {
+      margin-left: rs($base-lh);
+    }
+    li {
+      ul, ol, dl {
+        margin-bottom: 0;
+      }
+    }
+    dl dd {
+      margin: 0 0 rs($base-fs) 0;
+    }
+
+    nav ul, nav ol,
+    .nav li, .nav ol {
+      list-style: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* Text Marking */
+
+    ins, mark {
+      color: invert($color-highlight);
+      background-color: $color-highlight;
+    }
+    ins {
+      text-decoration: none;
+    }
+    del {
+      text-decoration: line-through;
+    }
+    abbr[title] {
+      border-bottom: 1px dotted;
+    }
+    abbr.initialism {
+      font-size: 90%;
+      text-transform: uppercase;
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid $color-border;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    /* Quotes */
+    blockquote {
+        margin: rs($base-fs) rs($base-lh);
+    }
+
+    /* Selections (Must be declared separately) */
+    @each $prefix in "::-moz-selection", "::selection" {
+
+      #{$prefix} {
+        text-shadow: none;
+        background: $color-selection;
+      }
+
+    }
+
+
+  /*= @group Embeded Content
+  ---------------------------------------------------------------------- */
+
+  img { vertical-align: middle; }
+  img, embed, object, video { max-width: 100%; _width: 100%; }
+
+
+  /*= @group Figures
+  ---------------------------------------------------------------------- */
+
+  figure {
+
+  }
+
+
+  /*= @group Code
+  ---------------------------------------------------------------------- */
+
+  code  {
+    padding: 0 .2em;
+    color: $color-code;
+    background-color: $color-code-background;
+  }
+  pre, .code {
+    color: $color-pre;
+    background-color: $color-pre-background;
+    margin-bottom: rs($base-lh);
+    padding: rs($base-lh / 2) rs($base-lh);
+  }
+  pre code,
+  .code code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  .code li {
+    list-style-type: decimal-leading-zero;
+  }
+
+
+  /*= @group Tables
+  ---------------------------------------------------------------------- */
+
+  table {
+
+  }
+
+
+  /*= @group Forms
+  ---------------------------------------------------------------------- */
+  // From HTML5 Boilerplate
+
+  form {
+
+  }
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  textarea {
+    resize: vertical;
+  }

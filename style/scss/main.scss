@@ -1,17 +1,20 @@
 @charset "utf-8";
 
-// SCSS Toolkit by David Rapson
-// A starter toolkit for SCSS projects
-//
-// The toolkit uses a combination of recommendations from Adaptive Web Design, http://easy-readers.net/
-// and Scalable and Modular Architecture for CSS (SMACSS) http://smacss.com/book
+/*
+  SCSS Toolkit
+  @davidrapson
+
+  A starter toolkit based on SMACSS for Sass (SCSS) projects,
+  with optional support for Compass.
+
+*/
+
 
 // Compass Plugins
 // ===============
 
 // Optional, if you are using Compass
 // @import "compass/utilities", "compass/css3";
-
 
 // Sass Features
 // =============
@@ -23,8 +26,8 @@
 // Styles are defined in the following order & groupings:
 // Base, Layout, Module, State
 
-// Base styles (reset + elements)
-@import "common/base";
+// Base styles (normalize + base)
+@import "vendor/normalize", "common/base";
 
 // Layout
 // ======
